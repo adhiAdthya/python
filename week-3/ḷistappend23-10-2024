@@ -2,6 +2,6 @@ list=[]
 print("list[]")
 
 list.append(1)
-list.append("rifa")
+list.append("adhi")
 list.append("apple")
 print("updated list",list)
