@@ -1,0 +1,11 @@
+message = "rifa"
+print(message)
+new = " "
+n = len(message)
+new += message[n - 1]  # Add the last character
+i = 1
+while i < n - 1:
+    new += message[i]  # Use square brackets
+    i += 1
+new += message[0]  # Add the first character
+print(new) 
