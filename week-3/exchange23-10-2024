@@ -1,4 +1,4 @@
-message = "rifa"
+message = "adithya"
 print(message)
 new = " "
 n = len(message)
