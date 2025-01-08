@@ -1,0 +1,38 @@
+class Publisher:
+    def __init__(self):
+        self.books = []  # List to store books
+
+    # Method to add a book
+    def add_book(self, title, author, year):
+        book = {"title": title, "author": author, "year": year}
+        self.books.append(book)
+
+    # Method to display available books
+    def available_books(self):
+        if not self.books:
+            print("No books available.")
+        else:
+            print("Available Books:")
+            for book in self.books:
+                print(f"- {book['title']} by {book['author']} ({book['year']})")
+
+    # Method to display book details
+    def book_details(self, title):
+        for book in self.books:
+            if book["title"].lower() == title.lower():
+                print(f"Book Details for '{book['title']}':")
+                print(f"Author: {book['author']}")
+                print(f"Year: {book['year']}")
+                return
+        print(f"Book '{title}' not found.")
+
+# Example usage
+publisher = Publisher()
+publisher.add_book("The Catcher in the Rye", "J.D. Salinger", 1951)
+publisher.add_book("To Kill a Mockingbird", "Harper Lee", 1960)
+
+# Show available books
+publisher.available_books()
+
+# Get book details
+publisher.book_details("The Catcher in the Rye")
